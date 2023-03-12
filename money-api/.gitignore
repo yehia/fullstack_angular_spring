@@ -4,7 +4,7 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 ../workspace/
-
+../mysql_money_api_db_data/
 ### STS ###
 .apt_generated
 .classpath
