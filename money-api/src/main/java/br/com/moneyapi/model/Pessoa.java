@@ -2,6 +2,7 @@ package br.com.moneyapi.model;
 
 import java.util.Objects;
 
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,16 +12,22 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table(name = "categoria")
-public class Categoria {
+@Table(name = "pessoa")
+public class Pessoa {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long codigo;
-	
+
 	@NotNull
-	@Size(min = 3, max = 50)
+	@Size(min = 3, max = 200)
 	private String nome;
+
+	@Embedded
+	private Endereco endereco;
+
+	@NotNull
+	private Boolean ativo;
 
 	public Long getCodigo() {
 		return codigo;
@@ -38,6 +45,22 @@ public class Categoria {
 		this.nome = nome;
 	}
 
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
+	}
+
+	public Boolean getAtivo() {
+		return ativo;
+	}
+
+	public void setAtivo(Boolean ativo) {
+		this.ativo = ativo;
+	}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(codigo);
@@ -51,7 +74,7 @@ public class Categoria {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Categoria other = (Categoria) obj;
+		Pessoa other = (Pessoa) obj;
 		return Objects.equals(codigo, other.codigo);
 	}
 
