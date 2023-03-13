@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -24,6 +23,7 @@ import br.com.moneyapi.event.RecursoCriadoEvent;
 import br.com.moneyapi.exceptionhandler.MoneyExceptionHandler.Erro;
 import br.com.moneyapi.model.Lancamento;
 import br.com.moneyapi.repository.LancamentoRepository;
+import br.com.moneyapi.repository.filter.LancamentoFilter;
 import br.com.moneyapi.service.LancamentoService;
 import br.com.moneyapi.service.exception.PessoaInexistenteOuInativaException;
 
@@ -44,8 +44,8 @@ public class LancamentoResource {
 	private ApplicationEventPublisher publisher;
 	
 	@GetMapping
-	public List<Lancamento> listar() {
-		return this.lancamentoRepository.findAll();
+	public List<Lancamento> pesquisar(LancamentoFilter lancamentoFilter) {
+		return this.lancamentoRepository.filtrar(lancamentoFilter);
 	}
 	
 	@PostMapping
