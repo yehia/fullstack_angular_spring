@@ -31,7 +31,7 @@ public class MoneyExceptionHandler extends ResponseEntityExceptionHandler {
 			HttpHeaders headers, HttpStatus status, WebRequest request) {
 
 		var mensagemUsuario = this.messageSource.getMessage("mensagem.invalida", null, LocaleContextHolder.getLocale());
-		var mensagemDesenvolvedor = ex.getCause().toString();
+		var mensagemDesenvolvedor = ex.getCause() != null ? ex.getCause().toString() : ex.toString();
 		var erros = Arrays.asList(new Erro(mensagemUsuario, mensagemDesenvolvedor));
 		return handleExceptionInternal(ex, erros, headers, HttpStatus.BAD_REQUEST, request);
 	}
