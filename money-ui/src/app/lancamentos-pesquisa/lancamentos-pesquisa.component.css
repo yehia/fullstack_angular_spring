@@ -1,0 +1,32 @@
+.input-vencimento-de {
+  margin-right: 10px !important;
+  width: 120px;
+}
+
+.input-vencimento-ate {
+  margin-left: 10px !important;
+  width: 120px;
+}
+
+.header-valor {
+  text-align: right !important;
+}
+
+.header-tipo {
+  text-align: center !important;
+}
+
+.col-valor{
+  width: 120px;
+  text-align: right !important;
+}
+
+.col-data {
+  width: 120px;
+  text-align: center !important;
+}
+
+.col-tipo {
+  width: 150px;
+  text-align: center !important;
+}
