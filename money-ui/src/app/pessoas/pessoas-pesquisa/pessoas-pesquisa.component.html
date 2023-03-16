@@ -1,0 +1,20 @@
+<div class="container">
+  <form #pessoaPesquisaForm="ngForm">
+    <div>
+      <h1>Pessoas</h1>
+    </div>
+
+    <div>
+      <div class="p-fluid">
+        <label>Nome</label>
+        <input pInputText type="text" placeholder="Informe um nome para a consulta." />
+      </div>
+    </div>
+
+    <div class="button-form">
+      <button pButton type="submit" label="Pesquisar" icon="pi pi-search"></button>
+    </div>
+
+    <app-pessoas-grid [pessoas]="pessoas"></app-pessoas-grid>
+  </form>
+</div>

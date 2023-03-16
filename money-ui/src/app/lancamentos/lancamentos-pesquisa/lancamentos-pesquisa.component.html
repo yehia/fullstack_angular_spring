@@ -1,0 +1,29 @@
+<div class="container">
+  <form autocomplete="off" #lancamentoPesquisaForm="ngForm">
+    <div>
+      <h1>Lançamentos</h1>
+    </div>
+
+    <div>
+      <div class="p-col-12 p-fluid">
+        <label>Descrição</label>
+        <input pInputText type="text" placeholder="Informe uma descrição para a consulta." />
+      </div>
+    </div>
+
+    <div class="p-col-12">
+      <label style="display: block;">Vencimento</label>
+        <p-calendar class="input-vencimento-de" name="vencimentoDe" dateFormat="dd/mm/yy" [readonlyInput]="true" [showIcon]="false" placeholder="Selecione uma data." ngModel #vencimentoDe="ngModel"></p-calendar>
+        <!-- <input class="input-vencimento-de" pInputText type="text" placeholder="Data inicial" /> -->
+
+        <label>até</label>
+        <p-calendar class="input-vencimento-ate" name="vencimentoAte" dateFormat="dd/mm/yy" [readonlyInput]="true" [showIcon]="false" placeholder="Selecione uma data." ngModel #vencimentoAte="ngModel"></p-calendar>
+    </div>
+
+    <div class="p-col-12">
+      <button pButton type="submit" label="Pesquisar" icon="pi pi-search"></button>
+    </div>
+
+    <app-lancamentos-grid [lancamentos]="lancamentos"></app-lancamentos-grid>
+  </form>
+</div>
