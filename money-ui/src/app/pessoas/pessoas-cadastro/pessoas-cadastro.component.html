@@ -9,23 +9,23 @@
         <label>Nome</label>
         <input pInputText type="text" placeholder="Informe um nome." required ngModel #nome="ngModel" name="nome" minlength="3" />
 
-        <!-- <app-message-custom [control]="nome" error="required" text="Informe um nome."></app-message-custom> -->
-        <!-- <app-message-custom [control]="nome" error="minlength" text="Mínimo de {{ nome.errors?.['minlength']?.requiredLength }} caracteres."></app-message-custom> -->
+        <app-message-custom [control]="nome" error="required" text="Informe um nome."></app-message-custom>
+        <app-message-custom [control]="nome" error="minlength" text="Mínimo de {{ nome.errors?.['minlength']?.requiredLength }} caracteres."></app-message-custom>
       </div>
 
       <div class="p-col-12 p-md-9 p-lg-9 p-xl-9">
         <label>Logradouro</label>
         <input pInputText type="text" placeholder="Informe um logradouro." required ngModel #logradouro="ngModel" name="logradouro" minlength="3" />
 
-        <!-- <app-message-custom [control]="logradouro" error="required" text="Informe um logradouro."></app-message-custom> -->
-        <!-- <app-message-custom [control]="logradouro" error="minlength" text="Mínimo de {{ logradouro.errors?.['minlength']?.requiredLength }} caracteres."></app-message-custom> -->
+        <app-message-custom [control]="logradouro" error="required" text="Informe um logradouro."></app-message-custom>
+        <app-message-custom [control]="logradouro" error="minlength" text="Mínimo de {{ logradouro.errors?.['minlength']?.requiredLength }} caracteres."></app-message-custom>
       </div>
 
       <div class="p-col-12 p-md-3 p-lg-3 p-xl-3">
         <label>Número</label>
         <input pInputText type="text" placeholder="Informe um número." required ngModel #numero="ngModel" name="numero" />
 
-        <!-- <app-message-custom [control]="numero" error="required" text="Informe um número."></app-message-custom> -->
+        <app-message-custom [control]="numero" error="required" text="Informe um número."></app-message-custom>
       </div>
 
       <div class="p-col-12 p-md-4 p-lg-4 p-xl-4">
@@ -37,31 +37,31 @@
         <label>Bairro</label>
         <input pInputText type="text" placeholder="Informe um bairro." required ngModel #bairro="ngModel" name="bairro" minlength="3" />
 
-        <!-- <app-message-custom [control]="bairro" error="required" text="Informe um bairro."></app-message-custom> -->
-        <!-- <app-message-custom [control]="bairro" error="minlength" text="Mínimo de {{ bairro.errors?.['minlength']?.requiredLength }} caracteres."></app-message-custom> -->
+        <app-message-custom [control]="bairro" error="required" text="Informe um bairro."></app-message-custom>
+        <app-message-custom [control]="bairro" error="minlength" text="Mínimo de {{ bairro.errors?.['minlength']?.requiredLength }} caracteres."></app-message-custom>
       </div>
 
       <div class="p-col-12 p-md-4 p-lg-4 p-xl-4">
         <label>CEP</label>
         <p-inputMask mask="99.999-999" placeholder="Informe um CEP" required ngModel #cep="ngModel" name="cep"></p-inputMask>
 
-        <!-- <app-message-custom [control]="cep" error="required" text="Informe um CEP."></app-message-custom> -->
+        <app-message-custom [control]="cep" error="required" text="Informe um CEP."></app-message-custom>
       </div>
 
       <div class="p-col-12 p-md-6 p-lg-6 p-xl-6">
         <label>Cidade</label>
         <input pInputText type="text" placeholder="Informe uma cidade." required ngModel #cidade="ngModel" name="cidade" minlength="2" />
 
-        <!-- <app-message-custom [control]="cidade" error="required" text="Informe uma cidade."></app-message-custom> -->
-        <!-- <app-message-custom [control]="cidade" error="minlength" text="Mínimo de {{ cidade.errors?.['minlength']?.requiredLength }} caracteres."></app-message-custom> -->
+        <app-message-custom [control]="cidade" error="required" text="Informe uma cidade."></app-message-custom>
+        <app-message-custom [control]="cidade" error="minlength" text="Mínimo de {{ cidade.errors?.['minlength']?.requiredLength }} caracteres."></app-message-custom>
       </div>
 
       <div class="p-col-12 p-md-6 p-lg-6 p-xl-6">
         <label>Estado</label>
         <input pInputText type="text" placeholder="Informe um estado." required ngModel #estado="ngModel" name="estado" minlength="2" />
 
-        <!-- <app-message-custom [control]="estado" error="required" text="Informe um estado."></app-message-custom> -->
-        <!-- <app-message-custom [control]="estado" error="minlength" text="Mínimo de {{ estado.errors?.['minlength']?.requiredLength }} caracteres."></app-message-custom> -->
+        <app-message-custom [control]="estado" error="required" text="Informe um estado."></app-message-custom>
+        <app-message-custom [control]="estado" error="minlength" text="Mínimo de {{ estado.errors?.['minlength']?.requiredLength }} caracteres."></app-message-custom>
       </div>
     </div>
 

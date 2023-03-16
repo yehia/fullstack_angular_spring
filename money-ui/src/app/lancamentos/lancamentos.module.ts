@@ -1,3 +1,4 @@
+import { SharedModule } from './../shared/shared.module';
 import { ToolbarModule } from 'primeng/toolbar';
 import { DropdownModule } from 'primeng/dropdown';
 import { TableModule } from 'primeng/table';
@@ -37,6 +38,8 @@ import { LancamentosCadastroComponent } from './lancamentos-cadastro/lancamentos
     TableModule,
     DropdownModule,
     ToolbarModule,
+
+    SharedModule,
 
     CurrencyMaskModule,
   ],
