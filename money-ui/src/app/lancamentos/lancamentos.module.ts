@@ -1,3 +1,8 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+
+import { LancamentoService } from './lancamento.service';
 import { SharedModule } from './../shared/shared.module';
 import { ToolbarModule } from 'primeng/toolbar';
 import { DropdownModule } from 'primeng/dropdown';
@@ -5,9 +10,6 @@ import { TableModule } from 'primeng/table';
 import { TooltipModule } from 'primeng/tooltip';
 import { ButtonModule } from 'primeng/button';
 import { FormsModule } from '@angular/forms';
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import {InputTextModule} from 'primeng/inputtext';
 import { CalendarModule } from 'primeng/calendar';
@@ -28,6 +30,7 @@ import { LancamentosCadastroComponent } from './lancamentos-cadastro/lancamentos
   imports: [
     CommonModule,
     FormsModule,
+    HttpClientModule,
 
     SelectButtonModule,
     CalendarModule,
@@ -46,6 +49,9 @@ import { LancamentosCadastroComponent } from './lancamentos-cadastro/lancamentos
   exports: [
     LancamentosCadastroComponent,
     LancamentosPesquisaComponent,
+  ],
+  providers: [
+    LancamentoService
   ]
 })
 export class LancamentosModule { }

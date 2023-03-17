@@ -26,7 +26,6 @@ import { PessoasModule } from './pessoas/pessoas.module';
     // Owners
     PessoasModule,
     LancamentosModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent]
